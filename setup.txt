@@ -1,0 +1,5 @@
+#   initial setup
+python -m venv infographicsEnvironment
+.\infographicsEnvironment\Scripts\activate
+
+pip install Pillow
