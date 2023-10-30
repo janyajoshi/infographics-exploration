@@ -8,13 +8,13 @@ import ReactFlow, {
 	useEdgesState,
 } from "reactflow"
 
-import BackgroundImage from "../backgrounds/boeing-air-brush-747_d_wallpaper.jpg"
+import BackgroundImage from "../backgrounds/flowerBG.PNG"
 import { nodes as initialNodes, edges as initialEdges } from "./custom-elements"
 import CustomNode from "./CustomNode"
 import "reactflow/dist/style.css"
 import "../styles/flowchart-styles.css"
 import CustomNodeOverride from "./CustomNodeOverride"
-import { addPositionToNodes } from "./positionFinder"
+import { addPositionToNodes, forbiddenZones } from "./positionFinder"
 
 const nodeTypes = {
 	custom: CustomNodeOverride,
@@ -28,7 +28,7 @@ const onInit = (reactFlowInstance) => console.log("flow loaded:", reactFlowInsta
 
 const Flowchart = () => {
 	const [nodes, setNodes, onNodesChange] = useNodesState(
-		addPositionToNodes(initialNodes, 1000, 500, 100, 30)
+		addPositionToNodes(initialNodes, 1000, 500, 200, 100)
 	)
 	const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges)
 	const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [])
@@ -50,10 +50,30 @@ const Flowchart = () => {
 		nodeDimensionsIncludeLabels: true, // Include node labels in layout calculations
 	}
 	return (
-		<div style={{ width: 1000, height: 500 }}>
+		<div style={{ width: 1000, height: 500, position: "relative" }}>
+			{forbiddenZones.map((forbiddenZone, i) => (
+				<div
+					style={{
+						position: "absolute",
+						zIndex: "1",
+						color: "white",
+						background: "#800080ba",
+						borderRadius: "4px",
+						top: `${forbiddenZone.top}px`,
+						left: `${forbiddenZone.left}px`,
+						width: `${forbiddenZone.width}px`,
+						height: `${forbiddenZone.height}px`,
+						display: "flex",
+						alignItems: "center",
+						justifyContent: "center",
+					}}>
+					{`Forbidden Zone ${i + 1}`}
+				</div>
+			))}
+
 			<ReactFlow
 				nodes={nodes}
-				edges={edges}
+				// edges={edges}
 				onNodesChange={onNodesChange}
 				onEdgesChange={onEdgesChange}
 				onConnect={onConnect}

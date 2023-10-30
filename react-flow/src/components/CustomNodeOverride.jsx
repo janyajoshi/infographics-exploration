@@ -1,15 +1,16 @@
 import React, { memo } from "react"
 import { Handle, Position } from "reactflow"
+import icon from "../icons/icon_digital_twin.png"
 
 function CustomNodeOverride({ id, data }) {
 	return (
 		<>
-			<Handle
+			{/* <Handle
 				type='target'
 				position={Position.Left}
 				style={{ top: 15, left: -8, background: "#555" }}
 				onConnect={(params) => console.log("handle onConnect", params)}
-			/>
+			/> */}
 			<div
 				style={{
 					width: "100%",
@@ -23,14 +24,18 @@ function CustomNodeOverride({ id, data }) {
 					borderRadius: "4px",
 					position: "absolute",
 				}}>
-				<span>{data.label}</span>
+				<div style={{ padding: "8px" }}>
+					<img src={icon} width={40} height={40} />
+					<br />
+					<span>{data.label}</span>
+				</div>
 			</div>
-			<Handle
+			{/* <Handle
 				type='source'
 				position={Position.Right}
 				id='a'
 				style={{ top: 15, right: -8, background: "#555" }}
-			/>
+			/> */}
 		</>
 	)
 }

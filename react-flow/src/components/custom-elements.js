@@ -7,11 +7,11 @@ export const nodes = [
 		type: "custom",
 		position: { x: 0, y: 0 },
 		data: {
-			label: "Some Label 1",
+			label: "1. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 		},
 		style: {
-			width: "100px",
-			height: "30px",
+			width: "200px",
+			height: "100px",
 			background: "#00000000",
 			borderRadius: "4px",
 		},
@@ -21,11 +21,11 @@ export const nodes = [
 		type: "custom",
 		position: { x: 0, y: 0 },
 		data: {
-			label: "Some Label 2",
+			label: "2. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 		},
 		style: {
-			width: "100px",
-			height: "30px",
+			width: "200px",
+			height: "100px",
 			background: "#00000000",
 			borderRadius: "4px",
 		},
@@ -35,11 +35,11 @@ export const nodes = [
 		type: "custom",
 		position: { x: 0, y: 0 },
 		data: {
-			label: "Some Label 3",
+			label: "3. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 		},
 		style: {
-			width: "100px",
-			height: "30px",
+			width: "200px",
+			height: "100px",
 			background: "#00000000",
 			borderRadius: "4px",
 		},
@@ -49,11 +49,11 @@ export const nodes = [
 		type: "custom",
 		position: { x: 0, y: 0 },
 		data: {
-			label: "Some Label 4",
+			label: "4. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 		},
 		style: {
-			width: "100px",
-			height: "30px",
+			width: "200px",
+			height: "100px",
 			background: "#00000000",
 			borderRadius: "4px",
 		},
@@ -63,44 +63,44 @@ export const nodes = [
 		type: "custom",
 		position: { x: 0, y: 0 },
 		data: {
-			label: "Some Label 5",
+			label: "5. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 		},
 		style: {
-			width: "100px",
-			height: "30px",
+			width: "200px",
+			height: "100px",
 			background: "#00000000",
 			borderRadius: "4px",
 		},
 	},
 	{
-		id: "n",
+		id: "6",
 		type: "custom",
 		position: { x: 0, y: 0 },
 		data: {
-			label: "Some Label n",
+			label: "6. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
 		},
 		style: {
-			width: "100px",
-			height: "30px",
+			width: "200px",
+			height: "100px",
 			background: "#00000000",
 			borderRadius: "4px",
 		},
 	},
-	{
-		id: "res",
-		type: "output",
-		data: {
-			label: "Result : res",
-		},
-		className: "circle",
-		style: {
-			background: "#2B6CB0",
-			color: "white",
-		},
-		position: { x: 700, y: 200 },
-		sourcePosition: Position.Right,
-		targetPosition: Position.Left,
-	},
+	// {
+	// 	id: "res",
+	// 	type: "output",
+	// 	data: {
+	// 		label: "Result : res",
+	// 	},
+	// 	className: "circle",
+	// 	style: {
+	// 		background: "#2B6CB0",
+	// 		color: "white",
+	// 	},
+	// 	position: { x: 700, y: 200 },
+	// 	sourcePosition: Position.Right,
+	// 	targetPosition: Position.Left,
+	// },
 ]
 
 export const edges = [
